@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le parcours - Mon sport : le raid multisports</title>
+  <link rel="stylesheet" href="style.css"> <!-- même feuille de style que les autres pages -->
+</head>
+
+<body>
+
+  <header>
+    <h1>Le parcours d'un raid</h1>
+    <p>Une épreuve, plusieurs disciplines, de gauche à droite</p>
+  </header>
+
+  <!-- Même menu que sur les autres pages ; "actif" est maintenant sur "Le parcours" -->
+  <nav id="menu">
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="parcours.html" class="actif">Le parcours</a></li>
+      <li><a href="competitions.html">Compétitions</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <section>
+      <h2>L'enchaînement des efforts</h2>
+      <p>
+        Dans un raid, on ne s'arrête pas entre les disciplines :
+        le chronomètre tourne en continu. Voici les étapes, dans l'ordre.
+      </p>
+
+      <!-- Conteneur de la frise : le CSS (#parcours) utilise display:flex dessus -->
+      <div id="parcours">
+
+        <!-- Étape 1 -->
+        <div class="etape">
+          <img src="images/course.svg" alt="Dessin d'un coureur sur un sentier" width="200" height="125">
+          <h3>Course à pied</h3>
+          <p>Départ en sentier, 5 km</p>
+        </div>
+
+        <!-- Flèche de séparation (aria-hidden : ignorée par les lecteurs d'écran, elle est décorative) -->
+        <div class="fleche" aria-hidden="true">&#10142;</div>
+
+        <!-- Étape 2 -->
+        <div class="etape">
+          <img src="images/vtt.svg" alt="Dessin d'un VTT bleu sur un chemin de campagne" width="200" height="125">
+          <h3>VTT</h3>
+          <p>Parcours vallonné, 20 km</p>
+        </div>
+
+        <div class="fleche" aria-hidden="true">&#10142;</div>
+
+        <!-- Étape 3 -->
+        <div class="etape">
+          <img src="images/canoe.svg" alt="Dessin d'un canoë jaune sur l'eau" width="200" height="125">
+          <h3>Canoë</h3>
+          <p>Descente de rivière, 6 km</p>
+        </div>
+
+        <div class="fleche" aria-hidden="true">&#10142;</div>
+
+        <!-- Étape 4 (sans image : pas obligatoire sur chaque étape) -->
+        <div class="etape">
+          <h3>Sprint final</h3>
+          <p>Dernière ligne droite jusqu'à l'arrivée</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Liste numérotée : ici l'ordre compte, donc <ol> et non <ul> -->
+    <section class="carte">
+      <h2>Mes conseils pour bien enchaîner</h2>
+      <ol>
+        <li>Partir à une allure que l'on peut tenir longtemps.</li>
+        <li>Boire et manger pendant le VTT, pas seulement à la fin.</li>
+        <li>Préparer le matériel de chaque discipline à l'avance.</li>
+        <li>Garder de l'énergie pour le sprint final.</li>
+      </ol>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Projet NSI - Site réalisé en HTML5 et CSS3</p>
+  </footer>
+
+</body>
+</html>
