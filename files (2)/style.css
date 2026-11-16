@@ -1,0 +1,103 @@
+/* ===== style.css : feuille de style unique, liée aux 3 pages ===== */
+
+/* Style de toute la page : police, fond, couleur du texte */
+body {
+  font-family: Arial, sans-serif;   /* police simple */
+  background-color: white;          /* fond blanc */
+  color: #222222;                   /* texte gris très foncé */
+  max-width: 900px;                 /* le contenu ne dépasse pas 900px */
+  margin: 20px auto;                /* centré dans la page (auto à gauche et à droite) */
+  padding: 0 15px;                  /* petit espace intérieur gauche/droite */
+  line-height: 1.5;                 /* espace entre les lignes */
+}
+
+/* Titres */
+h1 {
+  color: #14532d;                   /* vert foncé */
+}
+
+h2 {
+  color: #1f6f8b;                   /* bleu */
+}
+
+/* Menu : id car il n'y en a qu'un par page */
+#menu ul {
+  list-style: none;                 /* enlève les puces */
+  padding: 0;                       /* enlève le retrait par défaut */
+}
+
+#menu li {
+  display: inline;                  /* les liens se mettent côte à côte */
+  margin-right: 20px;               /* espace à droite de chaque lien */
+}
+
+/* Classe pour la page où l'on se trouve */
+.actif {
+  font-weight: bold;                /* texte en gras */
+  color: #222222;
+  text-decoration: none;            /* pas de soulignement */
+}
+
+/* Image principale de l'accueil (id) */
+#image-accueil {
+  border: 2px solid #14532d;        /* bordure verte */
+  border-radius: 8px;               /* coins arrondis */
+}
+
+/* Les images ne dépassent jamais leur conteneur */
+img {
+  max-width: 100%;
+  height: auto;                     /* garde les proportions */
+}
+
+/* ----- Page parcours : la frise de gauche à droite ----- */
+
+/* Application du flexbox : les étapes s'alignent sur une ligne */
+#parcours {
+  display: flex;
+  justify-content: space-between;   /* espace réparti entre les éléments */
+  align-items: center;              /* centrés verticalement */
+  gap: 10px;
+}
+
+/* Chaque étape (classe : il y en a plusieurs) */
+.etape {
+  flex: 1;                          /* toutes les étapes ont la même largeur */
+  text-align: center;
+  border: 1px solid #1f6f8b;
+  padding: 10px;
+}
+
+/* Les flèches entre les étapes (classe) */
+.fleche {
+  font-size: 2em;
+  color: #1f6f8b;
+}
+
+/* Sur petit écran (800px ou moins), la frise passe en colonne */
+@media (max-width: 800px) {
+  #parcours {
+    flex-direction: column;
+  }
+  .fleche {
+    transform: rotate(90deg);       /* la flèche pointe vers le bas */
+  }
+}
+
+/* ----- Page compétitions : le tableau ----- */
+
+table {
+  border-collapse: collapse;        /* fusionne les bordures en un seul trait */
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #1f6f8b;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #1f6f8b;        /* en-tête bleu */
+  color: white;
+}

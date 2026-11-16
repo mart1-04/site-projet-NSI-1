@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le parcours - Le raid multisports</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1>Le parcours d'un raid</h1>
+
+  <nav id="menu">
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="parcours.html" class="actif">Le parcours</a></li>
+      <li><a href="competitions.html">Compétitions</a></li>
+    </ul>
+  </nav>
+
+  <h2>Les étapes, de gauche à droite</h2>
+  <p>Le chronomètre tourne sans arrêt entre les disciplines.</p>
+
+  <!-- Conteneur de la frise : le CSS lui applique display:flex -->
+  <div id="parcours">
+
+    <div class="etape">
+      <img src="coureur.jpg" alt="Coureur de trail sur un sentier" width="200" height="125">
+      <h3>Course à pied</h3>
+      <p>5 km</p>
+    </div>
+
+    <div class="fleche">&#10142;</div> <!-- &#10142; = flèche -->
+
+    <div class="etape">
+      <img src="velo.jpg" alt="Vététiste sur un chemin de terre" width="200" height="125">
+      <h3>VTT</h3>
+      <p>20 km</p>
+    </div>
+
+    <div class="fleche">&#10142;</div>
+
+    <div class="etape">
+      <img src="canoë.jpg" alt="Deux pagayeurs en canoë sur une rivière" width="200" height="125">
+      <h3>Canoë</h3>
+      <p>6 km</p>
+    </div>
+
+    <div class="fleche">&#10142;</div>
+
+    <div class="etape">
+      <h3>Sprint final</h3>
+      <p>Arrivée</p>
+    </div>
+
+  </div>
+
+  <h2>Mes conseils</h2>
+  <!-- Liste numérotée : l'ordre compte -->
+  <ol>
+    <li>Partir à une allure tenable.</li>
+    <li>Boire et manger pendant le VTT.</li>
+    <li>Préparer le matériel à l'avance.</li>
+    <li>Garder de l'énergie pour le sprint.</li>
+  </ol>
+
+</body>
+</html>
